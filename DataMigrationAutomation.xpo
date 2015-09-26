@@ -1,0 +1,3298 @@
+Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBE
+
+; Microsoft Dynamics AX Enumtype : AllDMFModule unloaded
+; --------------------------------------------------------------------------------
+  ENUMTYPEVERSION 1
+  
+  ENUMTYPE #AllDMFModule
+    PROPERTIES
+      Name                #AllDMFModule
+      Label               #@SYS23300
+      Help                #@SYS4595
+      ConfigurationKey    #DMF
+      UseEnumValue        #Yes
+      Origin              #{14222DBB-9E96-4962-B8C5-FD83C8E794BF}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+      #SystemAdministration
+      PROPERTIES
+        Name                #SystemAdministration
+        Label               #@SYS334405
+        EnumValue           #24
+      ENDPROPERTIES
+      
+      #AccountsPayable
+      PROPERTIES
+        Name                #AccountsPayable
+        Label               #@SYS333874
+        EnumValue           #1
+      ENDPROPERTIES
+      
+      #AccountsReceivable
+      PROPERTIES
+        Name                #AccountsReceivable
+        Label               #@SYS333907
+        EnumValue           #2
+      ENDPROPERTIES
+      
+      #GeneralLedger
+      PROPERTIES
+        Name                #GeneralLedger
+        Label               #@SYS333959
+        EnumValue           #3
+      ENDPROPERTIES
+      
+      #FiscalBooks_BR
+      PROPERTIES
+        Name                #FiscalBooks_BR
+        Label               #@SYS4082161
+        EnumValue           #4
+        CountryRegionCodes  #BR
+      ENDPROPERTIES
+      
+      #Budgeting
+      PROPERTIES
+        Name                #Budgeting
+        Label               #@SYS334013
+        EnumValue           #5
+      ENDPROPERTIES
+      
+      #CostAccounting
+      PROPERTIES
+        Name                #CostAccounting
+        Label               #@SYS334015
+        EnumValue           #6
+      ENDPROPERTIES
+      
+      #FixedAssets
+      PROPERTIES
+        Name                #FixedAssets
+        Label               #@SYS334024
+        EnumValue           #7
+      ENDPROPERTIES
+      
+      #RAsset
+      PROPERTIES
+        Name                #RAsset
+        Label               #@GLS106645
+        ConfigurationKey    #RAsset
+        EnumValue           #8
+        CountryRegionCodes  #RU
+      ENDPROPERTIES
+      
+      #CashAndBankManagement
+      PROPERTIES
+        Name                #CashAndBankManagement
+        Label               #@SYS334036
+        EnumValue           #9
+      ENDPROPERTIES
+      
+      #TravelAndExpense
+      PROPERTIES
+        Name                #TravelAndExpense
+        Label               #@SYS334046
+        EnumValue           #10
+      ENDPROPERTIES
+      
+      #ComplianceAndInternalControls
+      PROPERTIES
+        Name                #ComplianceAndInternalControls
+        Label               #@SYS334064
+        EnumValue           #11
+      ENDPROPERTIES
+      
+      #HRM
+      PROPERTIES
+        Name                #HRM
+        Label               #@SYS6720
+        EnumValue           #12
+      ENDPROPERTIES
+      
+      #Payroll
+      PROPERTIES
+        Name                #Payroll
+        Label               #@GLS92169
+        ConfigurationKey    #Payroll
+        EnumValue           #13
+      ENDPROPERTIES
+      
+      #ProcurementAndSourcing
+      PROPERTIES
+        Name                #ProcurementAndSourcing
+        Label               #@SYS334073
+        EnumValue           #14
+      ENDPROPERTIES
+      
+      #ProductInformationManagement
+      PROPERTIES
+        Name                #ProductInformationManagement
+        Label               #@SYS334117
+        EnumValue           #15
+      ENDPROPERTIES
+      
+      #MasterPlanning
+      PROPERTIES
+        Name                #MasterPlanning
+        Label               #@SYS334131
+        EnumValue           #16
+      ENDPROPERTIES
+      
+      #ProductionControl
+      PROPERTIES
+        Name                #ProductionControl
+        Label               #@SYS334143
+        EnumValue           #17
+      ENDPROPERTIES
+      
+      #InventoryAndWarehouseManagement
+      PROPERTIES
+        Name                #InventoryAndWarehouseManagement
+        Label               #@SYS334191
+        EnumValue           #18
+      ENDPROPERTIES
+      
+      #SalesAndMarketing
+      PROPERTIES
+        Name                #SalesAndMarketing
+        Label               #@SYS334250
+        EnumValue           #19
+      ENDPROPERTIES
+      
+      #RetailMain
+      PROPERTIES
+        Name                #RetailMain
+        Label               #@RET3014
+        ConfigurationKey    #Retail
+        EnumValue           #20
+      ENDPROPERTIES
+      
+      #ProjectManagementAndAccounting
+      PROPERTIES
+        Name                #ProjectManagementAndAccounting
+        Label               #@SYS334296
+        EnumValue           #21
+      ENDPROPERTIES
+      
+      #ServiceManagement
+      PROPERTIES
+        Name                #ServiceManagement
+        Label               #@SYS334354
+        EnumValue           #22
+      ENDPROPERTIES
+      
+      #OrganizationAdministration
+      PROPERTIES
+        Name                #OrganizationAdministration
+        Label               #@SYS334374
+        EnumValue           #23
+      ENDPROPERTIES
+      
+      #All
+      PROPERTIES
+        Name                #All
+        Label               #All
+        EnumValue           #0
+      ENDPROPERTIES
+      
+    ENDTYPEELEMENTS
+  ENDENUMTYPE
+  
+
+***Element: DBT
+
+; Microsoft Dynamics AX Table : DMFSelectedEntities unloaded
+; --------------------------------------------------------------------------------
+  TABLEVERSION 1
+  
+  TABLE #DMFSelectedEntities
+    EnforceFKRelation 1
+    PROPERTIES
+      Name                #DMFSelectedEntities
+      CreateRecIdIndex    #Yes
+      PrimaryIndex        #SurrogateKey
+      ClusterIndex        #SurrogateKey
+      Origin              #{EF12FE9F-269B-4FE9-93F6-9226A99FEA4C}
+    ENDPROPERTIES
+    
+    FIELDS
+      FIELD #DMFBatchStatus
+        ENUM
+        PROPERTIES
+          Name                #DMFBatchStatus
+          Table               #DMFSelectedEntities
+          Origin              #{6C570648-F089-4F23-9789-DE4087D8F310}
+          EnumType            #DMFToolStatus
+        ENDPROPERTIES
+        
+      FIELD #EntityClass
+        STRING
+        PROPERTIES
+          Name                #EntityClass
+          Label               #@DMF175
+          HelpText            #@DMF358
+          AllowEdit           #No
+          Table               #DMFSelectedEntities
+          Origin              #{20B39917-C15C-43CD-A219-0BDAAC69471C}
+          ExtendedDataType    #ClassName
+          StringSize          #40
+        ENDPROPERTIES
+        
+      FIELD #EntityName
+        STRING
+        PROPERTIES
+          Name                #EntityName
+          Table               #DMFSelectedEntities
+          Origin              #{81A68076-71D8-4364-972E-15B3BD19CFBA}
+          ExtendedDataType    #DMFEntityName
+          StringSize          #60
+        ENDPROPERTIES
+        
+      FIELD #EntityTable
+        STRING
+        PROPERTIES
+          Name                #EntityTable
+          Label               #@SYS331205
+          HelpText            #@DMF176
+          AllowEdit           #No
+          Table               #DMFSelectedEntities
+          Origin              #{97C1634E-B756-48E0-8EDF-E80E6E3EFB48}
+          ExtendedDataType    #TableName
+          StringSize          #40
+        ENDPROPERTIES
+        
+      FIELD #Priority
+        INT
+        PROPERTIES
+          Name                #Priority
+          Table               #DMFSelectedEntities
+          Origin              #{BAD6157A-7A96-413E-A13E-4C7B9C98C75E}
+          ExtendedDataType    #ReleaseUpdatePriority
+        ENDPROPERTIES
+        
+      FIELD #StartDateTime
+        DATETIME
+        PROPERTIES
+          Name                #StartDateTime
+          Label               #@SYS39127
+          Table               #DMFSelectedEntities
+          Origin              #{15AFA0B8-7E7D-4C42-9EE3-DEA1697B8B49}
+          ExtendedDataType    #StartDateTime
+        ENDPROPERTIES
+        
+      FIELD #SysModule
+        ENUM
+        PROPERTIES
+          Name                #SysModule
+          AllowEdit           #No
+          Table               #DMFSelectedEntities
+          Origin              #{46B99A9E-3F4F-436C-B4CD-2690B0091895}
+          EnumType            #DMFModule
+        ENDPROPERTIES
+        
+      FIELD #TargetEntity
+        STRING
+        PROPERTIES
+          Name                #TargetEntity
+          Label               #@DMF355
+          HelpText            #@DMF356
+          AllowEdit           #No
+          Table               #DMFSelectedEntities
+          Origin              #{D12B8EAD-C9C1-46E9-89DE-ADA016F3FF26}
+          ExtendedDataType    #QueryName
+          StringSize          #40
+        ENDPROPERTIES
+        
+    ENDFIELDS
+    GROUPS
+      GROUP #Overview
+        PROPERTIES
+          Name                #Overview
+          Label               #@SYS50012
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #SysModule
+          #TargetEntity
+          #EntityClass
+          #EntityName
+          #EntityTable
+        ENDGROUPFIELDS
+      ENDGROUP
+    ENDGROUPS
+    
+    INDICES
+    ENDINDICES
+    FULLTEXTINDICES
+    ENDFULLTEXTINDICES
+    REFERENCES
+      REFERENCE #EntityNameRelation
+        PROPERTIES
+          Name                #EntityNameRelation
+          Table               #DMFEntity
+          UseDefaultRoleNames #Yes
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE NORMAL
+          PROPERTIES
+            Field               #EntityName
+            RelatedField        #EntityName
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
+    ENDREFERENCES
+    
+    DELETEACTIONS
+    ENDDELETEACTIONS
+    
+    METHODS
+    ENDMETHODS
+  ENDTABLE
+  
+
+***Element: DBT
+
+; Microsoft Dynamics AX Table : DMFProcessAutomationTool unloaded
+; --------------------------------------------------------------------------------
+  TABLEVERSION 1
+  
+  TABLE #DMFProcessAutomationTool
+    EnforceFKRelation 1
+    PROPERTIES
+      Name                #DMFProcessAutomationTool
+      CreateRecIdIndex    #Yes
+      PrimaryIndex        #EntityIdx
+      ClusterIndex        #SurrogateKey
+      Origin              #{72FA429F-A077-4BCB-A0BD-4E93DE6C463D}
+    ENDPROPERTIES
+    
+    FIELDS
+      FIELD #DefinationGroupName
+        STRING
+        PROPERTIES
+          Name                #DefinationGroupName
+          Label               #@SYS10874
+          Table               #DMFProcessAutomationTool
+          Origin              #{41929530-2A88-4A0D-AA50-16BA1C2CCB72}
+          ExtendedDataType    #DMFDefinationGroupName
+          StringSize          #60
+        ENDPROPERTIES
+        
+      FIELD #DMFBatchStatus
+        ENUM
+        PROPERTIES
+          Name                #DMFBatchStatus
+          Table               #DMFProcessAutomationTool
+          Origin              #{EA7AC96A-23C9-4CD6-A975-E919C83385B6}
+          EnumType            #DMFToolStatus
+        ENDPROPERTIES
+        
+      FIELD #EntityClass
+        STRING
+        PROPERTIES
+          Name                #EntityClass
+          Label               #@DMF175
+          HelpText            #@DMF358
+          AllowEdit           #No
+          Table               #DMFProcessAutomationTool
+          Origin              #{ABCA41ED-D0AA-4F00-B1E5-6ACD42EC31DE}
+          ExtendedDataType    #ClassName
+          StringSize          #40
+        ENDPROPERTIES
+        
+      FIELD #EntityName
+        STRING
+        PROPERTIES
+          Name                #EntityName
+          AllowEdit           #No
+          Table               #DMFProcessAutomationTool
+          Origin              #{63EB2D9F-E0A0-4A40-BA02-A21357FFC8A8}
+          ExtendedDataType    #DMFEntityName
+          StringSize          #60
+        ENDPROPERTIES
+        
+      FIELD #EntityTable
+        STRING
+        PROPERTIES
+          Name                #EntityTable
+          Label               #@SYS331205
+          HelpText            #@DMF176
+          AllowEdit           #No
+          Table               #DMFProcessAutomationTool
+          Origin              #{FBB2CEA3-B483-407C-B114-B195CCE400F4}
+          ExtendedDataType    #TableName
+          StringSize          #40
+        ENDPROPERTIES
+        
+      FIELD #Priority
+        INT
+        PROPERTIES
+          Name                #Priority
+          Mandatory           #Yes
+          Table               #DMFProcessAutomationTool
+          Origin              #{8035173A-2640-4A6E-B3C7-0DFC25763A34}
+          ExtendedDataType    #ReleaseUpdatePriority
+        ENDPROPERTIES
+        
+      FIELD #SampleFilePath
+        STRING
+        PROPERTIES
+          Name                #SampleFilePath
+          Label               #@DMF149
+          Mandatory           #Yes
+          Table               #DMFProcessAutomationTool
+          Origin              #{64F87437-D886-49F8-AB1B-1B76BD3C07BB}
+          ExtendedDataType    #FilenameOpen
+          StringSize          #259
+        ENDPROPERTIES
+        
+      FIELD #Source
+        STRING
+        PROPERTIES
+          Name                #Source
+          Label               #@SYS11258
+          Table               #DMFProcessAutomationTool
+          Origin              #{ACEE9DE0-0087-4929-AB8E-A90D93F5BEFE}
+          ExtendedDataType    #DMFSourceName
+          StringSize          #60
+        ENDPROPERTIES
+        
+      FIELD #StartDateTime
+        DATETIME
+        PROPERTIES
+          Name                #StartDateTime
+          Label               #@SYS39127
+          Table               #DMFProcessAutomationTool
+          Origin              #{ABEB13D0-182D-4586-B4FB-2C3A6A1B5377}
+          ExtendedDataType    #StartDateTime
+        ENDPROPERTIES
+        
+      FIELD #SysModule
+        ENUM
+        PROPERTIES
+          Name                #SysModule
+          AllowEdit           #No
+          Table               #DMFProcessAutomationTool
+          Origin              #{6B76B950-7A63-4296-9132-9977E7CDBE34}
+          EnumType            #DMFModule
+        ENDPROPERTIES
+        
+      FIELD #TargetEntity
+        STRING
+        PROPERTIES
+          Name                #TargetEntity
+          Label               #@DMF355
+          HelpText            #@DMF356
+          AllowEdit           #No
+          Table               #DMFProcessAutomationTool
+          Origin              #{2A69F612-746B-4DF1-8EFF-DFF94E64DA8C}
+          ExtendedDataType    #QueryName
+          StringSize          #40
+        ENDPROPERTIES
+        
+    ENDFIELDS
+    GROUPS
+      GROUP #AutoIdentification
+        PROPERTIES
+          Name                #AutoIdentification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #EntityName
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #Overview
+        PROPERTIES
+          Name                #Overview
+          Label               #Overview
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #EntityName
+          #EntityTable
+          #Priority
+          #SampleFilePath
+          #SysModule
+          #TargetEntity
+          #Source
+          #DMFBatchStatus
+        ENDGROUPFIELDS
+      ENDGROUP
+    ENDGROUPS
+    
+    INDICES
+      #EntityIdx
+      PROPERTIES
+        Name                #EntityIdx
+        AllowDuplicates     #No
+        Origin              #{03CAA958-3D1F-4491-A9FC-D86A133EA2C7}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #EntityName
+      ENDINDEXFIELDS
+      
+    ENDINDICES
+    FULLTEXTINDICES
+    ENDFULLTEXTINDICES
+    REFERENCES
+    ENDREFERENCES
+    
+    DELETEACTIONS
+    ENDDELETEACTIONS
+    
+    METHODS
+      SOURCE #find
+        #public static DMFProcessAutomationTool find(
+        #    DMFEntityName              _entityName,
+        #    boolean                 _forupdate = true,
+        #    ConcurrencyModel        _concurrencyModel = ConcurrencyModel::Auto)
+        #{
+        #    DMFProcessAutomationTool dmfProcessAutomationTool;
+        #    ;
+        #
+        #    dmfProcessAutomationTool.selectForUpdate(_forupdate);
+        #
+        #    if (_forupdate  && _concurrencyModel != ConcurrencyModel::Auto)
+        #    {
+        #        dmfProcessAutomationTool.concurrencyModel(_concurrencyModel);
+        #    }
+        #
+        #    select firstonly
+        #        dmfProcessAutomationTool
+        #        where
+        #        dmfProcessAutomationTool.EntityName == _entityName;
+        #
+        #    return dmfProcessAutomationTool;
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDTABLE
+  
+
+***Element: DBT
+
+; Microsoft Dynamics AX Table : DMFDefinitionGroupTest unloaded
+; --------------------------------------------------------------------------------
+  TABLEVERSION 1
+  
+  TABLE #DMFDefinitionGroupTest
+    EnforceFKRelation 0
+    PROPERTIES
+      Name                #DMFDefinitionGroupTest
+      Label               #@SYS67126
+      FormRef             #DMFDefinitionGroup
+      TitleField1         #DefinationGroupName
+      TitleField2         #Description
+      ConfigurationKey    #DMF
+      CacheLookup         #EntireTable
+      CreateRecIdIndex    #Yes
+      SaveDataPerCompany  #No
+      TableGroup          #Group
+      PrimaryIndex        #NameIdx
+      ClusterIndex        #RecId
+      DeveloperDocumentation  #@DMF390
+      Origin              #{5BA58784-B756-412D-85D6-464C3A63E32D}
+    ENDPROPERTIES
+    
+    FIELDS
+      FIELD #Adapter
+        ENUM
+        PROPERTIES
+          Name                #Adapter
+          AllowEditOnCreate   #No
+          AllowEdit           #No
+          Visible             #No
+          Table               #DMFDefinitionGroupTest
+          Origin              #{64C858E3-33F3-40A6-A8FF-A0208C52A79B}
+          EnumType            #DMFAdapter
+        ENDPROPERTIES
+        
+      FIELD #CompareType
+        ENUM
+        PROPERTIES
+          Name                #CompareType
+          AllowEditOnCreate   #No
+          AllowEdit           #No
+          Table               #DMFDefinitionGroupTest
+          Origin              #{20496352-2F6B-4D20-93BE-33B6A023A837}
+          EnumType            #DMFCompare
+        ENDPROPERTIES
+        
+      FIELD #DefinationGroupName
+        STRING
+        PROPERTIES
+          Name                #DefinationGroupName
+          Label               #@SYS10874
+          Mandatory           #Yes
+          AllowEdit           #No
+          Table               #DMFDefinitionGroupTest
+          Origin              #{AA6625E7-690C-4F98-99CB-0DA8CFD0FBC7}
+          ExtendedDataType    #DMFDefinationGroupName
+          StringSize          #60
+        ENDPROPERTIES
+        
+      FIELD #Description
+        STRING
+        PROPERTIES
+          Name                #Description
+          Table               #DMFDefinitionGroupTest
+          Origin              #{8FC31A1E-A052-4A00-A4F1-4794F96B0AFB}
+          ExtendedDataType    #Description
+          StringSize          #60
+        ENDPROPERTIES
+        
+    ENDFIELDS
+    GROUPS
+      GROUP #AutoReport
+        PROPERTIES
+          Name                #AutoReport
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Adapter
+          #DefinationGroupName
+          #Description
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #Overview
+        PROPERTIES
+          Name                #Overview
+          Label               #@SYS50012
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #DefinationGroupName
+          #Description
+          #Adapter
+          #CompareType
+        ENDGROUPFIELDS
+      ENDGROUP
+    ENDGROUPS
+    
+    INDICES
+      #NameIdx
+      PROPERTIES
+        Name                #NameIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{9F1F9B4C-60A1-4AE2-8371-3CC2E0C5EB0C}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #DefinationGroupName
+      ENDINDEXFIELDS
+      
+    ENDINDICES
+    FULLTEXTINDICES
+    ENDFULLTEXTINDICES
+    REFERENCES
+    ENDREFERENCES
+    
+    DELETEACTIONS
+      #DMFDefinitionGroupDataArea(DMFDefinitionGroup)
+      PROPERTIES
+        Table               #DMFDefinitionGroupDataArea
+        DeleteAction        #Cascade
+        Relation            #DMFDefinitionGroup
+      ENDPROPERTIES
+      
+      #DMFDefinationGroupAccess(DMFDefinitionGroup)
+      PROPERTIES
+        Table               #DMFDefinationGroupAccess
+        DeleteAction        #Cascade
+        Relation            #DMFDefinitionGroup
+      ENDPROPERTIES
+      
+      #DMFDefinitionGroupExecution(DMFDefinitionGroup)
+      PROPERTIES
+        Table               #DMFDefinitionGroupExecution
+        DeleteAction        #Cascade
+        Relation            #DMFDefinitionGroup
+      ENDPROPERTIES
+      
+      #DMFDefinitionGroupEntity(DMFDefinitionGroup)
+      PROPERTIES
+        Table               #DMFDefinitionGroupEntity
+        DeleteAction        #Cascade
+        Relation            #DMFDefinitionGroup
+      ENDPROPERTIES
+      
+      #DMFComparison(DMFDefinitionGroup)
+      PROPERTIES
+        Table               #DMFComparison
+        DeleteAction        #Cascade
+        Relation            #DMFDefinitionGroup
+      ENDPROPERTIES
+      
+      #DMFComparisonEntityList(DMFDefinitionGroup)
+      PROPERTIES
+        Table               #DMFComparisonEntityList
+        DeleteAction        #Cascade
+        Relation            #DMFDefinitionGroup
+      ENDPROPERTIES
+      
+      #DMFComparisonLegalEntityList(DMFDefinitionGroup)
+      PROPERTIES
+        Table               #DMFComparisonLegalEntityList
+        DeleteAction        #Cascade
+        Relation            #DMFDefinitionGroup
+      ENDPROPERTIES
+      
+      #DMFComparisonReport(DMFDefinitionGroup)
+      PROPERTIES
+        Table               #DMFComparisonReport
+        DeleteAction        #Cascade
+        Relation            #DMFDefinitionGroup
+      ENDPROPERTIES
+      
+      #DMFEntityExportDetails(DMFDefinitionGroup)
+      PROPERTIES
+        Table               #DMFEntityExportDetails
+        DeleteAction        #Cascade
+        Relation            #DMFDefinitionGroup
+      ENDPROPERTIES
+      
+    ENDDELETEACTIONS
+    
+    METHODS
+      SOURCE #initValue
+        #public void initValue()
+        #{
+        #    super();
+        #    this.Adapter = DMFAdapter::SSISAdapter;
+        #}
+      ENDSOURCE
+      SOURCE #insert
+        #/// <summary>
+        #/// Inserts the record in to the <c>DMFDefinitionGroupDataArea</c> table
+        #/// </summary>
+        #/// <param name="_insertRelated">
+        #/// A true or false value to do insert.
+        #/// </param>
+        #public void insert(boolean _insertRelated = true)
+        #{
+        #    DMFDefinitionGroupDataArea  dmfDefinitionGroupDataArea;
+        #    DMFMyDefinitionGroups       dmfMyDefinitionGroups;
+        #
+        #    ttsbegin;
+        #    super();
+        #
+        #    if (_insertRelated)
+        #    {
+        #        dmfDefinitionGroupDataArea.DefinitionGroup = this.DefinationGroupName;
+        #        dmfDefinitionGroupDataArea.doInsert();
+        #    }
+        #    dmfMyDefinitionGroups.DefinitionGroup = this.DefinationGroupName;
+        #    dmfMyDefinitionGroups.insert();
+        #    ttscommit;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #find
+        #/// <summary>
+        #/// Gets the the record from <c>DMFDefinitionGroup</c> table.
+        #/// </summary>
+        #/// <param name="_dmfDefinationGroupName">
+        #/// A string value indicates the name of the defination group.
+        #/// </param>
+        #/// <param name="_update">
+        #/// A true or false value to indicate update operation.
+        #/// </param>
+        #/// <returns>
+        #/// Returns the first row of the <c>DMFDefinitionGroup</c> table.
+        #/// </returns>
+        #public static DMFDefinitionGroup find(
+        #    DMFDefinationGroupName  _dmfDefinationGroupName,
+        #    boolean                 _update = false)
+        #{
+        #    DMFDefinitionGroup  dmfDefinitionGroup;
+        #
+        #    dmfDefinitionGroup.selectForUpdate(_update);
+        #
+        #    if (_dmfDefinationGroupName)
+        #    {
+        #        select firstonly dmfDefinitionGroup
+        #            where dmfDefinitionGroup.DefinationGroupName == _dmfDefinationGroupName;
+        #    }
+        #
+        #    return dmfDefinitionGroup;
+        #}
+      ENDSOURCE
+      SOURCE #validate
+        #/// <summary>
+        #/// validates the record from <c>DMFDefinitionGroupEntity</c> table.
+        #/// </summary>
+        #/// <param name="_definitionGroup">
+        #/// A string value specifies the defination group.
+        #/// </param>
+        #
+        #public static server void validate(DMFDefinitionGroup _definitionGroup)
+        #{
+        #    DMFDefinitionGroupEntity definitionGroupEntity;
+        #    DMFDataSource            dataSource;
+        #    DMFParameters            parameters = DMFParameters::find();
+        #
+        #    while select Source from definitionGroupEntity
+        #        where definitionGroupEntity.DefinitionGroup == _definitionGroup.DefinationGroupName
+        #            join Type from dataSource
+        #                where dataSource.SourceName == definitionGroupEntity.Source
+        #    {
+        #        if (dataSource.Type != DMFSourceType::Ax && parameters.SharedFolderPath == '')
+        #        {
+        #            throw error("@DMF790");
+        #        }
+        #
+        #        if (dataSource.Type != DMFSourceType::Ax && parameters.ValidationStatus != NoYesError::Yes)
+        #        {
+        #            throw error("@DMF924");
+        #        }
+        #    }
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDTABLE
+  
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: DMFToolWizard unloaded
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #DMFToolWizard
+    PROPERTIES
+      Name                #DMFToolWizard
+      Extends             #SysWizard
+      RunOn               #Client
+      Origin              #{CB802464-6835-4F38-97A1-FBE4583CFAE0}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #accessMenuFunction
+        #public MenuFunction accessMenuFunction()
+        #{
+        #    return new MenuFunction(menuitemDisplayStr(DMFToolWizard),MenuItemType::Display);
+        #}
+      ENDSOURCE
+      SOURCE #classDeclaration
+        #public class dmfToolWizard extends SysWizard
+        #{
+        #     DMFSelectedEntities dmfSelectedEntities;
+        #     DMFProcessAutomationTool dmfProcessAutomation;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #finish
+        #protected void finish()
+        #{
+        #    super();
+        #
+        #    formRun.populateSelEntities();
+        #}
+      ENDSOURCE
+      SOURCE #formName
+        #FormName formName()
+        #{
+        #    return formStr(DMFToolWizard);
+        #}
+        #
+      ENDSOURCE
+      SOURCE #run
+        #void run()
+        #{
+        #}
+        #
+      ENDSOURCE
+      SOURCE #setupNavigation
+        #/*
+        #Use this method to setup the two arrays: nextEnabled[] and backEnabled[]
+        #Call this.nextEnabled(boolean) and this.backEnabled(boolean) to enable/disable the buttons runtime.
+        #*/
+        #void setupNavigation()
+        #{
+        #
+        #}
+        #
+      ENDSOURCE
+      SOURCE #validate
+        #boolean validate()
+        #{
+        #    return true;
+        #}
+        #
+      ENDSOURCE
+      SOURCE #main
+        #static void main(Args args)
+        #{
+        #   FormDataSource formDataSource = args.record().dataSource();
+        #
+        #    DMFToolWizard wizard = new DMFToolWizard();
+        #    if (wizard.prompt())
+        #    {
+        #        wizard.run();
+        #        formDataSource.executeQuery();
+        #    }
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: CLS
+
+; Microsoft Dynamics AX Class: DMFAutomationTool unloaded
+; --------------------------------------------------------------------------------
+  CLSVERSION 1
+  
+  CLASS #DMFAutomationTool
+    PROPERTIES
+      Name                #DMFAutomationTool
+      Origin              #{BFD0D966-AC3B-4063-8D37-E025B531515E}
+    ENDPROPERTIES
+    
+    METHODS
+      SOURCE #classDeclaration
+        #/// <summary>
+        #/// Import the data from selected entities in the form DMFProcessAutomation to target tables
+        #/// </summary>
+        #class DMFAutomationTool
+        #{
+        #    DMFExecution                execution;
+        #    DMFDefinitionGroup          dmfDefinitionGroup;
+        #    DMFDefinitionGroupEntity    dmfdefinitiongrpEntity;
+        #    DMFDefinitionGroupExecution dmfDefinitionGroupExecution;
+        #    DMFDefinationGroupName      definationGroup;
+        #    DMFExecutionId              nextExecutionId;
+        #    DMFExecutionId              executionId;
+        #    Description                 description;
+        #    DMFDataSource               dataSource;
+        #    DMFParameters               parameters;
+        #    DMFEntity                   dmfentity;
+        #    DMFDefinitionGroupExecution dmfDefinitionGroupExecutionLoc;
+        #    DMFExecutionId              executionIdLoc, executionIdOld;
+        #    int nextValue;
+        #    str defGroup;
+        #    int number;
+        #    str nextNumber;
+        #    boolean flag;
+        #    boolean  execption;
+        #}
+      ENDSOURCE
+      SOURCE #copyToTarget
+        #public void copyToTarget()
+        #{
+        #    DMFOperation                    selection;
+        #    DMFEntityName                   entityName;
+        #    DmfEntityWriter                 dmfEntityWriter;
+        #    DMFBatchStatusTable             batchStatusTable;
+        #    DMFEntityWriterTasks            dmfEntityWriterTasks;
+        #    DMFDefinitionGroupExecution     definitionGroupExecution;
+        #    TmpDMFStagingRecords            tmpDMFStagingRecordsLoc;
+        #    int                             newCount,
+        #                                    updCount,
+        #                                    newCountTotal,
+        #                                    updCountTotal;
+        #    boolean                         msgDisplayedLoc,
+        #                                    isEnd = true,
+        #                                    isParentCompleted,
+        #                                    updateInsertStatus,
+        #                                    numOfThreadsMore,
+        #                                    msgDisplayed;
+        #    BatchJob                        dmfBatchJob;
+        #   SelectableDataArea               dataArea = curext();
+        #   RefRecId                         batchId,
+        #                                    startIndex,
+        #                                    endIndex,
+        #                                    stagingLogRecId;
+        #   boolean                         parallelTask, iscomposite;
+        #   SelectableDataArea              company;
+        #   Batchable                       finalTask;
+        #
+        #
+        #    entityName = definitionGroupExecution.Entity;
+        #    dmfEntityWriter = new DmfEntityWriter();
+        #    selection = DMFOperation::All;
+        #
+        #
+        #    if(flag)
+        #    {
+        #    ttsBegin;
+        #    while select forUpdate dmfDefinitionGroupExecution
+        #        where dmfDefinitionGroupExecution.ExecutionId == execution.ExecutionId
+        #            && dmfDefinitionGroupExecution.DefinitionGroup ==   dmfDefinitionGroup.DefinationGroupName
+        #    {
+        #        dmfEntity = DMFEntity::find(dmfDefinitionGroupExecution.Entity);
+        #        if(dmfEntity.EntityType != DMFEntityTypes::CompositEntity)
+        #        {
+        #            if(selection == DMFOperation::All)
+        #            {
+        #                dmfDefinitionGroupExecution.NoOfRecords = DMFEntityWriter::getNumOfRecords(dmfEntity.EntityTable, dmfDefinitionGroupExecution.executionId,false,false);
+        #            }
+        #            //else
+        #            //{
+        #                //if(SelectedData && !errorStatus)
+        #                //{
+        #                    //definitionGroupExecution.NoOfRecords = DMFEntityWriter::getNumOfRecords(dmfEntity.EntityTable, definitionGroupExecution.executionId,false,true);
+        #                //}
+        #                //else if(errorStatus && !SelectedData)
+        #                //{
+        #                    //definitionGroupExecution.NoOfRecords = DMFEntityWriter::getNumOfRecords(dmfEntity.EntityTable, definitionGroupExecution.executionId,true,false);
+        #                //}
+        #                //else
+        #                //{
+        #                    //definitionGroupExecution.NoOfRecords = DMFEntityWriter::getNumOfRecords(dmfEntity.EntityTable, definitionGroupExecution.executionId,true,true);
+        #                //}
+        #            //}
+        #            dmfDefinitionGroupExecution.doupdate();
+        #        }
+        #    }
+        #    ttsCommit;
+        #
+        #    select firstonly1 execution
+        #        where execution.ExecutionId == executionId;
+        #
+        #    if (dmfEntityWriter.parmCompany())
+        #    {
+        #        dataArea = dmfEntityWriter.parmCompany();
+        #    }
+        #    changecompany(dataArea)
+        #    {
+        #        delete_from batchStatusTable
+        #            where batchStatusTable.ExecutionId == dmfEntityWriter.parmDMFExecution().ExecutionId
+        #              && (!entityName || batchStatusTable.EntityName == entityName);
+        #
+        #        while select dmfDefinitionGroupExecution order by Sequence asc
+        #            where dmfDefinitionGroupExecution.ExecutionId == execution.ExecutionId
+        #              && (!entityName || dmfDefinitionGroupExecution.Entity == entityName)
+        #            join dmfEntity where dmfEntity.EntityName == dmfDefinitionGroupExecution.Entity
+        #
+        #        {
+        #            isComposite = dmfEntity.EntityType == DMFEntityTypes::CompositEntity;
+        #            dmfEntityWriter.parmEntityTableName(dmfEntity.EntityTable);
+        #
+        #            // Execute the code for composite entity
+        #            if (!isComposite && dmfEntity.ParentEntityName)
+        #            {
+        #                isParentCompleted = false;
+        #                while (isParentCompleted == false)
+        #                {
+        #                    select count(RecId) from batchStatusTable
+        #                        where batchStatusTable.ExecutionId == dmfDefinitionGroupExecution.ExecutionId;
+        #                    if (batchStatusTable.RecId == 0)
+        #                    {
+        #                        isParentCompleted = true;
+        #                    }
+        #                }
+        #            }
+        #
+        #            ttsbegin;
+        #            try
+        #            {
+        #                dmfDefinitionGroupExecution.selectForUpdate(true);
+        #                dmfDefinitionGroupExecution.WriteStartDateTime = DateTimeUtil::utcNow();
+        #                dmfDefinitionGroupExecution.TargetStatus       = DMFBatchJobStatus::Executing;
+        #                dmfDefinitionGroupExecution.doUpdate();
+        #            }
+        #            catch(Exception ::UpdateConflict)
+        #            {
+        #                retry;
+        #            }
+        #            ttscommit;
+        #
+        #            if (isComposite)
+        #            {
+        #                continue;
+        #            }
+        #
+        #            // execution on server / batch
+        #            //if (dmfDefinitionGroupExecution.NoOfThreads > 1 || dmfEntityWriter.parmIsInMdmParallelBatch())
+        #            //{
+        #                //numOfThreadsMore = true;
+        #                //dmfEntityWriterTasks = new DMFEntityWriterTasks();
+        #                //dmfEntityWriterTasks.parmNumberOfThreads(dmfDefinitionGroupExecution.NoOfThreads);
+        #                //dmfEntityWriterTasks.parmNumOfStagingRecords(dmfDefinitionGroupExecution.NoOfRecords);
+        #                //dmfEntityWriterTasks.parmError(dmfEntityWriter.parmError());
+        #                //dmfEntityWriterTasks.parmParallelTask(true);
+        #                //dmfEntityWriterTasks.parmOnlySelected(dmfEntityWriter.parmSelectedData());
+        #                //dmfEntityWriterTasks.parmExecutionID(dmfDefinitionGroupExecution.ExecutionId);
+        #                //dmfEntityWriterTasks.parmDefinationGroupName(dmfDefinitionGroupExecution.DefinitionGroup);
+        #                //dmfEntityWriterTasks.parmEntityTable(DMFEntity::find(dmfDefinitionGroupExecution.Entity));
+        #                //dmfEntityWriterTasks.parmDefinitionGroupExecution(dmfDefinitionGroupExecution);
+        #                //dmfEntityWriterTasks.parmPrevTask(dmfEntityWriter.parmPrevTask());
+        #                //dmfEntityWriterTasks.parmMdmBatchHeader(dmfEntityWriter.parmMdmBatchHeader());
+        #                //dmfEntityWriterTasks.parmIsInMdmParallelBatch(dmfEntityWriter.parmIsInMdmParallelBatch());
+        #                //dmfEntityWriterTasks.parmIsCompare(compareData);
+        #                //dmfEntityWriterTasks.write();
+        #                //this.parmFinalTask(dmfEntityWriterTasks.parmTasksWriterStatus());
+        #            //}
+        #            //else // Execute on server only, not in batch
+        #            //{
+        #
+        #                tmpDMFStagingRecordsLoc = DMFEntityWriter::insertTempStagingTable(dmfEntityWriter.parmEntityTableName(),
+        #                                                                           execution.ExecutionId,
+        #                                                                            dmfEntityWriter.parmError(),
+        #                                                                            dmfEntityWriter.parmSelectedData());
+        #
+        #                startIndex  = DMFEntityWriter::getIndex(tmpDMFStagingRecordsLoc, 1);
+        #                endIndex    = DMFEntityWriter::getIndex(tmpDMFStagingRecordsLoc, dmfDefinitionGroupExecution.NoOfRecords);
+        #
+        #                [newCount, updCount, stagingLogRecId, msgDisplayedLoc] = DMFEntityWriter::runOnServerWriter(dmfDefinitionGroupExecution,
+        #                        dmfDefinitionGroupExecution.DefinitionGroup, dmfDefinitionGroupExecution.ExecutionId, DMFEntity::find(dmfDefinitionGroupExecution.Entity),
+        #                        dmfEntityWriter.parmError(),dmfEntityWriter.parmSelectedData(), startIndex, endIndex, dmfEntityWriter);
+        #
+        #                newCountTotal += newCount;
+        #                updCountTotal += updCount;
+        #
+        #                if (newCount || updCount)
+        #                {
+        #                    updateInsertStatus = true;
+        #                }
+        #
+        #                if(dmfEntityWriter.isInBatch())
+        #                {
+        #                    select firstOnly1 RecId, Status, StartDateTime from dmfBatchJob
+        #                        where dmfBatchJob.RecId == dmfDefinitionGroupExecution.BatchJobTarget;
+        #
+        #                    dmfDefinitionGroupExecution.BatchJobTarget = dmfBatchJob.RecId;
+        #
+        #                    if(dmfDefinitionGroupExecution.TargetStatus == DMFBatchJobStatus::Hold)
+        #                    {
+        #                        dmfDefinitionGroupExecution.TargetStatus = DMFBatchJobStatus::Waiting;
+        #                    }
+        #                    else
+        #                    {
+        #                        if (DMFGenerateSSISPackage::setStagingTargetStatus(dmfBatchJob.Status)
+        #                            == DMFGenerateSSISPackage::setStagingTargetStatus(BatchStatus::Executing))
+        #                        {
+        #                            dmfDefinitionGroupExecution.TargetStatus = DMFGenerateSSISPackage::setStagingTargetStatus(BatchStatus::Finished);
+        #                        }
+        #                        else
+        #                        {
+        #                            dmfDefinitionGroupExecution.TargetStatus = DMFGenerateSSISPackage::setStagingTargetStatus(dmfBatchJob.Status);
+        #                        }
+        #                    }
+        #                    dmfDefinitionGroupExecution.WriteStartDateTime = dmfBatchJob.StartDateTime;
+        #
+        #                    if (updateInsertStatus && !stagingLogRecId)
+        #                    {
+        #                        dmfDefinitionGroupExecution.TargetStatus = DMFBatchJobStatus::Finished;
+        #                    }
+        #                    else if (stagingLogRecId || msgDisplayedLoc)
+        #                    {
+        #                        dmfDefinitionGroupExecution.TargetStatus = DMFBatchJobStatus::Error;
+        #                    }
+        #                    if (!parallelTask)
+        #                    {
+        #                        info(strFmt("@DMF145", dmfDefinitionGroupExecution.Entity, newCount, updCount));
+        #                    }
+        #                }
+        #                else
+        #                {
+        #                    if(updateInsertStatus && !msgDisplayedLoc)
+        #                    {
+        #                        dmfDefinitionGroupExecution.TargetStatus = DMFBatchJobStatus::Finished;
+        #                    }
+        #                    else
+        #                    {
+        #                        dmfDefinitionGroupExecution.TargetStatus = DMFBatchJobStatus::Error;
+        #                    }
+        #                    if (!dmfEntityWriter.parmCompareData())
+        #                    {
+        #                        info(strFmt("@DMF145", dmfDefinitionGroupExecution.Entity, newCount, updCount));
+        #                    }
+        #                    else
+        #                    {
+        #                        setPrefix(dmfDefinitionGroupExecution.Entity);
+        #                        info(strFmt("@DMF1827", newCount + updCount, strUpr(curext()), newCount, updCount));
+        #                    }
+        #                }
+        #                ttsbegin;
+        #                dmfDefinitionGroupExecution.selectForUpdate(true);
+        #                dmfDefinitionGroupExecution.WriteEndDateTime   = DateTimeUtil::getSystemDateTime();
+        #                dmfDefinitionGroupExecution.NumOfTargetNew     = newCount;
+        #                dmfDefinitionGroupExecution.NumOfTargetUpdated = updCount;
+        #                dmfDefinitionGroupExecution.update();
+        #                ttscommit;
+        #
+        #        }
+        #
+        #        // Update status for composite entity
+        #        while select dmfDefinitionGroupExecution order by Sequence asc
+        #            where dmfDefinitionGroupExecution.ExecutionId == dmfEntityWriter.parmDMFExecution().ExecutionId
+        #               && dmfDefinitionGroupExecution.FilePath != ""
+        #            join EntityType, EntityName from dmfEntity
+        #                where dmfEntity.EntityName == dmfDefinitionGroupExecution.Entity
+        #        {
+        #            isComposite = dmfEntity.EntityType == DMFEntityTypes::CompositEntity;
+        #
+        #            if(isComposite && !numOfThreadsMore)
+        #            {
+        #                ttsbegin;
+        #                dmfDefinitionGroupExecution.selectForUpdate(true);
+        #                dmfDefinitionGroupExecution.TargetStatus       = DMFBatchJobStatus::Finished;
+        #                dmfDefinitionGroupExecution.WriteEndDateTime   = DateTimeUtil::getSystemDateTime();
+        #                dmfDefinitionGroupExecution.NumOfTargetNew     = newCountTotal;
+        #                dmfDefinitionGroupExecution.NumOfTargetUpdated = updCountTotal;
+        #                dmfDefinitionGroupExecution.update();
+        #                ttscommit;
+        #            }
+        #        }
+        #
+        #        if (numOfThreadsMore)
+        #        {
+        #            if (!dmfEntityWriter.parmIsInMdmParallelBatch())
+        #            {
+        #                info("@DMF742");
+        #                info("@DMF842");
+        #            }
+        #        }
+        #        stagingLogRecId = DMFStagingLog::insertLogs(dmfEntityWriter.parmDMFExecution().ExecutionId, DMFSourceTarget::Target, stagingLogRecId,
+        #                                dmfDefinitionGroupExecution.DefinitionGroup, 0, dmfDefinitionGroupExecution.Entity);
+        #
+        #        select firstonly dmfDefinitionGroupExecution
+        #            where dmfDefinitionGroupExecution.ExecutionId == dmfEntityWriter.parmDMFExecution().ExecutionId;
+        #
+        #        if (msgDisplayedLoc && stagingLogRecId != 0)
+        #        {
+        #            msgDisplayed = true;
+        #        }
+        #        else
+        #        {
+        #            msgDisplayed = false;
+        #        }
+        #
+        #        DMFStagingLog::addInfoMsg(msgDisplayed, dmfDefinitionGroupExecution);
+        #    }
+        #  }
+        #     else
+        #        {
+        #           error("@DMF1953");
+        #            flag = false;
+        #        }
+        #}
+      ENDSOURCE
+      SOURCE #createProcessingGroup
+        #public DMFDefinationGroupName createProcessingGroup()
+        #{
+        #    DMFDefinationGroupName dmfDefinationGroupName;
+        #    flag = true;
+        #    try
+        #    {
+        #    ttsBegin;
+        #    dmfDefinitionGroup.DefinationGroupName = (NumberSeq::newGetNum(NumberSeqReference::findReference(extendedTypeNum(LineNum_numSeq))).num());
+        #    dmfDefinitionGroup.Description = dmfDefinitionGroup.DefinationGroupName ;
+        #    dmfDefinitionGroup.insert();
+        #    ttsCommit;
+        #        dmfDefinationGroupName =   dmfDefinitionGroup.DefinationGroupName;
+        #    info(strFmt("@DMF1958", dmfDefinitionGroup.DefinationGroupName));
+        #    }
+        #    catch
+        #    {
+        #       error("@DMF1252");
+        #        flag = false;
+        #    }
+        #    return dmfDefinationGroupName;
+        #}
+      ENDSOURCE
+      SOURCE #populateEntities
+        #public void populateEntities(DMFEntityName dmfEntityNametool)
+        #{
+        #    DMFProcessAutomationTool dmfProcessAutomationTool;
+        #
+        #    flag = true;
+        #    if(flag)
+        #    {
+        #       ttsBegin;
+        #       dmfdefinitiongrpEntity.Entity = dmfEntityNametool;
+        #       dmfdefinitiongrpEntity.DefinitionGroup = dmfDefinitionGroup.DefinationGroupName;
+        #       dmfdefinitiongrpEntity.Source = "CSV";
+        #       dmfdefinitiongrpEntity.SampleFilePath = DMFProcessAutomationTool::find(dmfEntityNametool).SampleFilePath;
+        #       dmfdefinitiongrpEntity.insert();
+        #        ttsCommit;
+        #
+        #       DMFXmlGeneration::generateMapping(dmfdefinitiongrpEntity);
+        #       this.stagingInsertion();
+        #       this.copyToTarget();
+        #
+        #        ttsBegin;
+        #        select forUpdate dmfProcessAutomationTool;
+        #       dmfProcessAutomationTool =  DMFProcessAutomationTool::find(dmfEntityNametool);
+        #        dmfProcessAutomationTool.DMFBatchStatus = DMFToolStatus::Finished;
+        #        dmfProcessAutomationTool.update();
+        #        ttsCommit;
+        #
+        #       dmfdefinitiongrpEntity.clear();
+        #    }
+        #    else
+        #    {
+        #        error("@DMF1950");
+        #        flag = false;
+        #    }
+        #}
+      ENDSOURCE
+      SOURCE #stagingInsertion
+        #private void stagingInsertion()
+        #{
+        #    DMFDefinitionGroupExecution    definationGroupExecutionUpdate;
+        #    SelectableDataArea            company;
+        #    Batchable               finalTask;
+        #
+        #    DMFStagingWriter dmfStagingWriter =  new DMFStagingWriter();
+        #
+        #   if(flag)
+        #   {
+        #        #define.dash('-')
+        #
+        #    select firstonly ExecutionId from dmfDefinitionGroupExecution
+        #        order by dmfDefinitionGroupExecution.CreatedDateTime desc
+        #        where dmfDefinitionGroupExecution.DefinitionGroup ==  dmfDefinitionGroup.DefinationGroupName;
+        #
+        #    executionIdOld = dmfDefinitionGroupExecution.ExecutionId;
+        #
+        #    if (!dmfDefinitionGroupExecution.ExecutionId)
+        #    {
+        #        nextExecutionId =  dmfDefinitionGroup.DefinationGroupName + #dash + int2str(1);
+        #    }
+        #    else
+        #    {
+        #        while (true)
+        #        {
+        #            number = strFind(dmfDefinitionGroupExecution.ExecutionId, #dash, 0, strLen(dmfDefinitionGroupExecution.ExecutionId));
+        #            if (number == 0)
+        #            {
+        #                break;
+        #            }
+        #            executionIdLoc = dmfDefinitionGroupExecution.ExecutionId;
+        #            dmfDefinitionGroupExecution.ExecutionId = strDel(dmfDefinitionGroupExecution.ExecutionId, 0, number);
+        #            nextNumber = dmfDefinitionGroupExecution.ExecutionId;
+        #        }
+        #        defGroup =  dmfDefinitionGroup.DefinationGroupName;
+        #        nextValue = str2int(nextNumber);
+        #
+        #        do
+        #        {
+        #            nextValue += 1;
+        #            nextExecutionId = defGroup + #dash + int2str(nextValue);
+        #
+        #            select firstonly RecId from dmfDefinitionGroupExecutionLoc
+        #                where dmfDefinitionGroupExecutionLoc.ExecutionId == nextExecutionId;
+        #        }while(dmfDefinitionGroupExecutionLoc.RecId);
+        #    }
+        #
+        #    executionId =   nextExecutionId;
+        #    description = nextExecutionId + "stag";
+        #
+        #    // Validate for the job id so that if its source status is not finished, it can be reused.
+        #    select firstonly RecId from dmfDefinitionGroupExecution
+        #        where dmfDefinitionGroupExecution.ExecutionId == executionId
+        #           && dmfDefinitionGroupExecution.StagingStatus == DMFBatchJobStatus::Finished;
+        #
+        #    if (dmfDefinitionGroupExecution.RecId)
+        #    {
+        #        throw error("@DMF404");
+        #    }
+        #
+        #    // Validate for the job id so that it cannot be used in other processing group again.
+        #    select firstonly RecId, DefinitionGroup from dmfDefinitionGroupExecution
+        #        where dmfDefinitionGroupExecution.ExecutionId == executionId;
+        #
+        #    if (dmfDefinitionGroupExecution.RecId && dmfDefinitionGroupExecution.DefinitionGroup !=  dmfDefinitionGroup.DefinationGroupName)
+        #    {
+        #        throw error("@DMF490");
+        #    }
+        #            dmfDefinitionGroup = DMFDefinitionGroup::find( dmfDefinitionGroup.DefinationGroupName);
+        #
+        #            DMFDefinitionGroupExecution::insertOrDisplay(dmfDefinitionGroup, executionId, description);
+        #
+        #
+        #
+        #    select firstonly1 execution
+        #        where execution.ExecutionId == executionId;
+        #
+        #    parameters =  DMFParameters::find();
+        #          select DefinitionGroup,ExecutionId,Entity from dmfDefinitionGroupExecution where  dmfDefinitionGroupExecution.DefinitionGroup ==
+        #          dmfDefinitionGroup.DefinationGroupName &&  dmfDefinitionGroupExecution.ExecutionId == executionId &&  dmfDefinitionGroupExecution.Entity
+        #          == dmfdefinitiongrpEntity.Entity;
+        #
+        #    while select dmfdefinitiongrpEntity
+        #            where dmfdefinitiongrpEntity.DefinitionGroup == dmfDefinitionGroupExecution.DefinitionGroup
+        #        join RecId from dmfentity
+        #            where dmfentity.EntityName == dmfdefinitiongrpEntity.Entity
+        #        join Type, SourceName from dataSource
+        #            where dataSource.SourceName == dmfdefinitiongrpEntity.Source
+        #    {
+        #        if (dataSource.Type != DMFSourceType::Ax && parameters.SharedFolderPath == '')
+        #        {
+        #             throw error("@DMF790");
+        #        }
+        #
+        #        if (dataSource.Type != DMFSourceType::Ax && parameters.ValidationStatus != NoYesError::Yes)
+        #        {
+        #            throw error("@DMF924");
+        #        }
+        #
+        #        if (DMFDefinitionGroupExecution::
+        #                find(dmfdefinitiongrpEntity.DefinitionGroup,
+        #                dmfdefinitiongrpEntity.Entity,
+        #                dmfDefinitionGroupExecution.ExecutionId).FileType == DMFFileType::File)
+        #        {
+        #            DMFHierarchyValidation::validateStaging(dmfdefinitiongrpEntity,tableName2id(tableStr(DMFDefinitionGroupExecution)),dmfDefinitionGroupExecution.ExecutionId);
+        #        }
+        #    }
+        #
+        #
+        #    if(DMFDefinitionGroupExecution::find(dmfDefinitionGroupExecution.DefinitionGroup,dmfDefinitionGroupExecution.Entity,
+        #            dmfDefinitionGroupExecution.ExecutionId).StagingStatus != DMFBatchJobStatus::NotRun)
+        #    {
+        #       throw error("@DMF1952");
+        #    }
+        #
+        #
+        #        dmfStagingWriter.parmDMFExecution(execution);
+        #        dmfStagingWriter.parmUtcTimeZone(DateTimeUtil::getUserPreferredTimeZone());
+        #        dmfStagingWriter.saveLast();
+        #
+        #
+        #
+        #        finalTask = DMFAutomationTool::runOnServer(execution.ExecutionId, 0, false,
+        #                                    dmfStagingWriter.parmApplyChangeTracking(), dmfStagingWriter.parmCtCursor(),  DateTimeUtil::getUserPreferredTimeZone(),
+        #                                    dmfStagingWriter.parmIsInMdmParallelBatch(), dmfStagingWriter.parmMdmBatchHeader(),dmfStagingWriter.parmIsCompare());
+        #
+        #    ttsbegin;
+        #    while select definationGroupExecutionUpdate
+        #        where definationGroupExecutionUpdate.ExecutionId == dmfDefinitionGroupExecution.ExecutionId
+        #        join EntityTable, EntityName, EntityType from dmfEntity
+        #        where dmfEntity.EntityName == definationGroupExecutionUpdate.Entity && dmfEntity.EntityType != DMFEntityTypes::CompositEntity
+        #    {
+        #        definationGroupExecutionUpdate.selectForUpdate(true);
+        #        definationGroupExecutionUpdate.NoOfRecords = DMFEntityWriter::getNumOfRecords(dmfEntity.EntityTable,definationGroupExecutionUpdate.ExecutionId, false, false);
+        #        definationGroupExecutionUpdate.doUpdate();
+        #    }
+        #    ttscommit;
+        #  }
+        #
+        #    else
+        #        {
+        #           error("@DMF1951");
+        #            flag = false;
+        #        }
+        #}
+      ENDSOURCE
+      SOURCE #main
+        #public static void main(Args _args)
+        #{
+        #  if(!_args)
+        #  {
+        #   throw error(Error::wrongUseOfFunction(funcName()));
+        #  }
+        #}
+      ENDSOURCE
+      SOURCE #runOnServer
+        #public static server Batchable runOnServer(DMFExecutionId _executionId, RecId _batchId, boolean runOn,
+        #                                        boolean _applyChangeTracking = false, AifChangeTrackingTable _ctCursor = null,
+        #                                        Timezone _timezone = DateTimeUtil::getUserPreferredTimeZone(),
+        #                                        boolean _isInMdmParallelBatch = false, BatchHeader _mdmBatchHeader = null,
+        #                                        boolean _isCompare = false)
+        #{
+        #    return DMFStagingWriter::execute(_executionId, _batchId, runOn, false, _applyChangeTracking, _ctCursor, _timezone, _isCompare, _isInMdmParallelBatch, _mdmBatchHeader);
+        #}
+      ENDSOURCE
+    ENDMETHODS
+  ENDCLASS
+
+***Element: FRM
+
+; Microsoft Dynamics AX Forms unloaded
+; --------------------------------------------------------------------------------
+FRMVERSION 12
+
+FORM #DMFProcessAutomation
+  PROPERTIES
+    Name                #DMFProcessAutomation
+    Origin              #{E01026BF-576E-4A61-98F9-FCE41599609F}
+  ENDPROPERTIES
+  
+  METHODS
+    SOURCE #classDeclaration
+      #public class FormRun extends ObjectRun
+      #{
+      #   int       backColor;
+      #   int       jobsFinished;
+      #   int       jobsTotal;
+      #   boolean   isError;
+      #   ImageListAppl_LedgerJournal     imageListAppl;
+      #}
+    ENDSOURCE
+    SOURCE #fileNameLookupFilename
+      #str fileNameLookupFilename()
+      #{
+      #    Filename    filepath;
+      #    Filename    filename;
+      #    Filename    fileType;
+      #
+      #    [filepath, filename, fileType] = fileNameSplit(SampleFilePath.text());
+      #
+      #    return filename + fileType;
+      #}
+    ENDSOURCE
+    SOURCE #fileNameLookupFilter
+      #container fileNameLookupFilter()
+      #{
+      #    #File
+      #    Filename    filepath;
+      #    Filename    filename;
+      #    Filename    fileExtention;
+      #
+      #    [filepath, filename, fileExtention] = Global::fileNameSplit(SampleFilePath.text());
+      #
+      #    fileExtention = #AllFilesExt;
+      #
+      #    return [WinAPI::fileType(fileExtention),#AllFilesName+fileExtention, #AllFilesExt, #AllFilesType];
+      #}
+    ENDSOURCE
+    SOURCE #fileNameLookupInitialPath
+      #// AOSRunMode::client
+      #str fileNameLookupInitialPath()
+      #{
+      #    #WinAPI
+      #
+      #    Filename    filepath;
+      #    Filename    filename;
+      #    Filename    fileType;
+      #
+      #    [filepath, filename, fileType] = Global::fileNameSplit(SampleFilePath.text());
+      #
+      #    // Default path
+      #    if (!filepath)
+      #    {
+      #        // Full path to the Windows folder for the current user.
+      #        // Exists on Windows 2000, Windows NT, Windows 98, and Windows 95.
+      #        filepath = WinAPI::getFolderPath(#CSIDL_Windows);
+      #    }
+      #
+      #    return filepath;
+      #}
+    ENDSOURCE
+    SOURCE #fileNameLookupTitle
+      #// AOSRunMode::client
+      #str fileNameLookupTitle()
+      #{
+      #    return  strFmt("@SYS309735","@DMF131");
+      #}
+    ENDSOURCE
+    SOURCE #filePathLookupTitle
+      #str filePathLookupTitle()
+      #{
+      #    return  strFmt("@SYS309735","@DMF131");
+      #}
+    ENDSOURCE
+    SOURCE #init
+      #public void init()
+      #{
+      #    super();
+      #
+      #    backColor = WinAPI::RGB2int( 255,225,225 );
+      #}
+    ENDSOURCE
+  ENDMETHODS
+  OBJECTBANK
+    PROPERTIES
+    ENDPROPERTIES
+    
+    DATASOURCE
+      OBJECTPOOL
+        PROPERTIES
+          Name                #DMFProcessAutomationTool
+          Table               #DMFProcessAutomationTool
+          AllowCreate         #No
+          InsertIfEmpty       #No
+        ENDPROPERTIES
+        
+        FIELDLIST
+        ENDFIELDLIST
+      ENDOBJECTPOOL
+      METHODS
+        SOURCE #errorExist
+          #display ImageRes errorExist()
+          #{
+          #    ImageRes    res = -1;
+          #    #resAppl;
+          #      imageListAppl  = new ImageListAppl_LedgerJournal();
+          #   // postingResults_Client = ledgerJournalEngine.getPostingResults_Client();
+          #
+          #   // if (postingResults_Client.errorExists(_ledgerJournalTrans.Voucher) ||
+          #       // (norwayEnabled && _ledgerJournalTrans.PaymentStatus == CustVendPaymStatus::Rejected))
+          #    if(isError)
+          #    {
+          #
+          #        res = 6;
+          #       // res = imageListAppl.image(#ImageError);
+          #        ErrorExist.visible(true);
+          #    }
+          #    return res;
+          #
+          #}
+        ENDSOURCE
+      ENDMETHODS
+    ENDDATASOURCE
+  ENDOBJECTBANK
+  
+  REFERENCEDATASOURCES
+  ENDREFERENCEDATASOURCES
+  
+  JOINS
+  ENDJOINS
+  
+  PARTREFERENCES
+  ENDPARTREFERENCES
+  
+  DESIGN
+    PROPERTIES
+      Width               #Column width
+      Height              #Column height
+      Caption             #@DMF1955
+      SetCompany          #No
+    ENDPROPERTIES
+    
+    CONTAINER
+      CONTROL ACTIONPANE
+        PROPERTIES
+          Name                #ActionPaneMain
+          ElementPosition     #268435455
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL ACTIONPANETAB
+        PROPERTIES
+          Name                #ConfigurationTab
+          ElementPosition     #1610612734
+          HierarchyParent     #ActionPaneMain
+          Caption             #@SYS53395
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL ACTIONPANETAB
+        PROPERTIES
+          Name                #IntializingTab
+          ElementPosition     #1073741822
+          HierarchyParent     #ActionPaneMain
+          Caption             #@SYS40536
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTONGROUP
+        PROPERTIES
+          Name                #ButtonGroup
+          ElementPosition     #872415230
+          DataSource          #DMFProcessAutomationTool
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTONGROUP
+        PROPERTIES
+          Name                #ButtonSetup
+          ElementPosition     #1431655764
+          HierarchyParent     #ConfigurationTab
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTONGROUP
+        PROPERTIES
+          Name                #Delete
+          ElementPosition     #1610612733
+          HierarchyParent     #IntializingTab
+          Caption             #@SYS109268
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTONGROUP
+        PROPERTIES
+          Name                #Initial
+          ElementPosition     #1073741822
+          HierarchyParent     #IntializingTab
+          Caption             #@SYS40536
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GRID
+        PROPERTIES
+          Name                #Grid
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1431655764
+          HierarchyParent     #MainGroup
+          DataSource          #DMFProcessAutomationTool
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #GroupMain
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1476395006
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #MainGroup
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1113510038
+          HierarchyParent     #GroupMain
+          FrameType           #Sunken 3D
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #ProgressBar
+          Width               #Column width
+          ElementPosition     #1610612733
+          HierarchyParent     #ProgressGroup
+          FrameType           #None
+          LeftMargin          #8
+          RightMargin         #8
+          ArrangeMethod       #Horizontal, flush left
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #ProgressGroup
+          Width               #Column width
+          ElementPosition     #1908874352
+          HierarchyParent     #GroupMain
+          FrameType           #None
+          LeftMargin          #8
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #Separator2
+          Width               #Column width
+          Height              #15
+          VerticalSpacing     #0
+          ElementPosition     #1670265058
+          HierarchyParent     #GroupMain
+          FrameType           #Edged 3D Line
+          TopMargin           #0
+          BottomMargin        #0
+          HideIfEmpty         #No
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTON
+        PROPERTIES
+          Name                #Run
+          HelpText            #@DMF1957
+          ElementPosition     #1610612734
+          HierarchyParent     #Initial
+          Text                #@SYS9282
+          ButtonDisplay       #Text & Image above
+          NormalImage         #10484
+          ImageLocation       #EmbeddedResource
+          MultiSelect         #Yes
+          Big                 #Yes
+        ENDPROPERTIES
+        
+        METHODS
+          SOURCE #clicked
+            #void clicked()
+            #{
+            #    Args args;
+            #    real progressBar;
+            #    DMFDefinationGroupName   dmfDefinationGroupName;
+            #    DMFProcessAutomationTool dmfProcessAutomation;
+            #    DMFAutomationTool        dmfAutomationTool;
+            #    Map map;
+            #    MapEnumerator mapEnumerator;
+            #    isError = true;
+            #    super();
+            #
+            #    map = new Map(types::Integer,Types::String);
+            #    dmfAutomationTool = new DMFAutomationTool();
+            #    jobsTotal = DMFProcessAutomationTool_ds.recordsMarked().lastIndex();
+            #
+            #    if(DMFProcessAutomationTool_ds.anyMarked())
+            #    {
+            #    dmfDefinationGroupName =  dmfAutomationTool.createProcessingGroup();
+            #    for(dmfProcessAutomation = getFirstSelection(DMFProcessAutomationTool_ds); dmfProcessAutomation; dmfProcessAutomation = DMFProcessAutomationTool_ds.getNext())
+            #    {
+            #       map.insert(dmfProcessAutomation.priority, dmfProcessAutomation.EntityName);
+            #    }
+            #    }
+            #
+            #    mapEnumerator = map.getEnumerator();
+            #
+            #    while(mapEnumerator.moveNext())
+            #    {
+            #        ttsBegin;
+            #        select forUpdate dmfProcessAutomation;
+            #        dmfProcessAutomation =  DMFProcessAutomationTool::find(mapEnumerator.currentValue());
+            #        dmfProcessAutomation.DMFBatchStatus = DMFToolStatus::Running;
+            #        dmfProcessAutomation.DefinationGroupName = dmfDefinationGroupName;
+            #        dmfProcessAutomation.update();
+            #        ttsCommit;
+            #
+            #        DMFProcessAutomationTool_ds.executeQuery();
+            #
+            #        args = new Args();
+            #        args.parm(mapEnumerator.currentValue());
+            #        try
+            #        {
+            #           dmfAutomationTool.populateEntities(mapEnumerator.currentValue());
+            #           isError = false;
+            #
+            #           DMFProcessAutomationTool_ds.executeQuery();
+            #
+            #           jobsFinished++;
+            #           progressBar = jobsTotal > 0 ?  (jobsFinished * 1000 / jobsTotal) : 0;
+            #           progress.pos(real2int(progressBar));
+            #           progress.rangeHi(1000);
+            #           progress.update();
+            #           progressPercent.text(strFmt('%1%', progressBar/10));
+            #        }
+            #        catch
+            #        {
+            #           isError = true;
+            #           DMFProcessAutomationTool_ds.errorExist();
+            #        }
+            #
+            #    }
+            #}
+          ENDSOURCE
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTON
+        PROPERTIES
+          Name                #ViewProcessingGroup
+          ElementPosition     #1879048190
+          HierarchyParent     #Initial
+          Text                #@DMF220
+          NormalImage         #3114
+          ImageLocation       #EmbeddedResource
+          MultiSelect         #No
+          Big                 #Yes
+        ENDPROPERTIES
+        
+        METHODS
+          SOURCE #clicked
+            #void clicked()
+            #{
+            #  DMFProcessAutomationTool dmfProcessAutomation;
+            #  Args args = new Args();
+            #
+            #  dmfProcessAutomation =   getFirstSelection(DMFProcessAutomationTool_ds);
+            #
+            #  if(dmfProcessAutomation.DefinationGroupName)
+            #    {
+            #      args.name(formstr(DMFDefinitionGroup));
+            #      args.record(DMFDefinitionGroup::find(dmfProcessAutomation.DefinationGroupName));
+            #      args.caller(this);
+            #
+            #      new MenuFunction(MenuItemDisplayStr(DMFDefinitionGroup),MenuItemType::Display).run(args);
+            #    }
+            #  else
+            #    {
+            #        info("@DMF1960");
+            #    }
+            #}
+          ENDSOURCE
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMBOBOX
+        PROPERTIES
+          Name                #DMFBatchStatus
+          AutoDeclaration     #Yes
+          ElementPosition     #1610612729
+          HierarchyParent     #Grid
+          DataSource          #DMFProcessAutomationTool
+          DataField           #DMFBatchStatus
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMBOBOX
+        PROPERTIES
+          Name                #Grid_SysModule
+          ElementPosition     #805306365
+          HierarchyParent     #Grid
+          DataSource          #DMFProcessAutomationTool
+          DataField           #SysModule
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMMANDBUTTON
+        PROPERTIES
+          Name                #DeleteCommandButton
+          ElementPosition     #1431655764
+          HierarchyParent     #Delete
+          Text                #@SYS14425
+          NormalImage         #10134
+          ImageLocation       #EmbeddedResource
+          SaveRecord          #No
+          MultiSelect         #Yes
+          Big                 #Yes
+          Primary             #Yes
+          Command             #2832
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL INTEDIT
+        PROPERTIES
+          Name                #Grid_Priority
+          ElementPosition     #1879048185
+          HierarchyParent     #Grid
+          DataSource          #DMFProcessAutomationTool
+          DataField           #Priority
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL MENUITEMBUTTON
+        PROPERTIES
+          Name                #DMFParameter
+          HelpText            #@SYS314331
+          ElementPosition     #1610612733
+          HierarchyParent     #ButtonSetup
+          Text                #@DMF1954
+          ButtonDisplay       #Text & Image above
+          NormalImage         #3478
+          ImageLocation       #EmbeddedResource
+          Big                 #Yes
+          MenuItemName        #DMFParameters
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL MENUITEMBUTTON
+        PROPERTIES
+          Name                #Initialize
+          HelpText            #@DMF1956
+          ElementPosition     #1073741822
+          HierarchyParent     #Initial
+          Text                #@SYS88055
+          ButtonDisplay       #Text & Image above
+          NormalImage         #11357
+          ImageLocation       #EmbeddedResource
+          MultiSelect         #Yes
+          Big                 #Yes
+          MenuItemName        #DMftoolWizard
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL MENUITEMBUTTON
+        PROPERTIES
+          Name                #SourceDataFormat
+          ElementPosition     #1073741822
+          HierarchyParent     #ButtonSetup
+          Text                #@DMF513
+          ButtonDisplay       #Text & Image above
+          NormalImage         #1091
+          ImageLocation       #EmbeddedResource
+          Big                 #Yes
+          MenuItemName        #DMFDataSource
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL PROGRESS
+        PROPERTIES
+          Name                #Progress
+          AutoDeclaration     #Yes
+          Left                #Left edge
+          Width               #Column width
+          ElementPosition     #1073741822
+          HierarchyParent     #ProgressBar
+          RangeHi             #1000
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STATICTEXT
+        PROPERTIES
+          Name                #UpgradeProgressLabel
+          ElementPosition     #1073741822
+          HierarchyParent     #ProgressGroup
+          Text                #@SYS314330
+          FontSize            #9
+          Bold                #Bold
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #Grid_EntityName
+          AllowEdit           #No
+          ElementPosition     #536870910
+          HierarchyParent     #Grid
+          DataSource          #DMFProcessAutomationTool
+          DataField           #EntityName
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #Grid_EntityTable
+          ElementPosition     #1073741820
+          HierarchyParent     #Grid
+          DataSource          #DMFProcessAutomationTool
+          DataField           #EntityTable
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #Grid_Source
+          Visible             #No
+          ElementPosition     #1476395002
+          HierarchyParent     #Grid
+          DataSource          #DMFProcessAutomationTool
+          DataField           #Source
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #Grid_TargetEntity
+          ElementPosition     #1342177275
+          HierarchyParent     #Grid
+          DataSource          #DMFProcessAutomationTool
+          DataField           #TargetEntity
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #ProgressPercent
+          AutoDeclaration     #Yes
+          AllowEdit           #No
+          Left                #Right edge
+          Width               #50
+          Height              #20
+          ElementPosition     #1610612733
+          HierarchyParent     #ProgressBar
+          Border              #None
+          Alignment           #Right
+          ShowLabel           #No
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #SampleFilePath
+          AutoDeclaration     #Yes
+          ElementPosition     #1744830456
+          HierarchyParent     #Grid
+          Label               #@SYS319541
+          DataSource          #DMFProcessAutomationTool
+          DataField           #SampleFilePath
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL WINDOW
+        PROPERTIES
+          Name                #ErrorExist
+          AutoDeclaration     #Yes
+          Visible             #No
+          AllowEdit           #No
+          Width               #14
+          Height              #14
+          Enabled             #No
+          Skip                #Yes
+          AlignControl        #No
+          ElementPosition     #357913940
+          HierarchyParent     #Grid
+          Imagemode           #Size to fit
+          ShowLabel           #No
+          DataSource          #DMFProcessAutomationTool
+          DataMethod          #errorExist
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+    ENDCONTAINER
+    
+  ENDDESIGN
+  
+  PERMISSIONS #Permissions
+    PROPERTIES
+    ENDPROPERTIES
+    
+    PERMISSIONSET #Read
+      PROPERTIES
+      ENDPROPERTIES
+      
+      FORM #Controls
+      ENDFORM
+      
+    TABLES #Tables
+    ENDTABLES
+    
+  SERVERMETHODS #Server Methods
+  ENDSERVERMETHODS
+  
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Update
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Create
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Delete
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+ENDPERMISSIONS
+
+ENDFORM
+
+
+***Element: FRM
+
+; Microsoft Dynamics AX Forms unloaded
+; --------------------------------------------------------------------------------
+FRMVERSION 12
+
+FORM #DMFToolWizard
+  PROPERTIES
+    Name                #DMFToolWizard
+    Origin              #{41D63F99-3FE9-4100-8264-D41435774E1A}
+  ENDPROPERTIES
+  
+  METHODS
+    SOURCE #classDeclaration
+      #public class FormRun extends ObjectRun
+      #{
+      #    DMFXMLWizard        sysWizard;
+      #    DMFSelectedEntities dmfCursor;
+      #}
+    ENDSOURCE
+    SOURCE #clearTable
+      #public void clearTable()
+      #{
+      #    delete_from dmfCursor;
+      #}
+    ENDSOURCE
+    SOURCE #DMFToolWizardtab
+      #FormTabControl DMFToolWizardtab()
+      #{
+      #    return DMFToolWizard;
+      #}
+      #
+    ENDSOURCE
+    SOURCE #init
+      #void init()
+      #{
+      #    DMFSelectedEntities selectedEntities;
+      #
+      #    if (element.args().caller())
+      #    {
+      #        sysWizard = element.Args().caller();
+      #    }
+      #
+      #    super();
+      #
+      #    element.populateEntities();
+      #}
+      #
+    ENDSOURCE
+    SOURCE #populateEntities
+      #public void populateEntities()
+      #{
+      #    DMFEntity   dmfEntities;
+      #    boolean     runForAll = false;
+      #    boolean     sysAdmin  = false;
+      #    int i;
+      #    if (dmfSelectedEntities.RecId)
+      #    {
+      #        element.clearTable();
+      #    }
+      #
+      #      i =   modules.selection();
+      #    switch (modules.selection())
+      #    {
+      #        case enum2int(AllDMFModule::All) :
+      #
+      #            runForAll = true;
+      #            break;
+      #
+      #        case enum2int(AllDMFModule::SystemAdministration):
+      #            sysAdmin = true;
+      #            break;
+      #    }
+      #    if(sysAdmin)
+      #    {
+      #        insert_recordset dmfCursor(EntityClass, EntityName, EntityTable, SysModule, TargetEntity)
+      #            select EntityClass, EntityName, EntityTable, SysModule, TargetEntity from dmfEntities
+      #                where  dmfEntities.SysModule == enum2int(DMFModule::SystemAdministration);
+      #    }
+      #    else
+      #    {
+      #        if (! runForAll)
+      #            {
+      #                insert_recordset dmfCursor(EntityClass, EntityName, EntityTable, SysModule, TargetEntity)
+      #                select EntityClass, EntityName, EntityTable, SysModule, TargetEntity from dmfEntities
+      #                where  dmfEntities.SysModule == modules.selection();
+      #            }
+      #        else
+      #            {
+      #                insert_recordset dmfCursor(EntityClass, EntityName, EntityTable, SysModule, TargetEntity)
+      #                select EntityClass, EntityName, EntityTable, SysModule, TargetEntity from dmfEntities;
+      #            }
+      #    }
+      #    dmfSelectedEntities_ds.executeQuery();
+      #}
+    ENDSOURCE
+    SOURCE #populateSelEntities
+      #public void populateSelEntities()
+      #{
+      #  DMFProcessAutomationTool  dmfProcessAutomation;
+      #  DMFSelectedEntities       dmfSelectedEntity;
+      #
+      #    if(dmfSelectedEntities_ds.anyMarked())
+      #    {
+      #        for(dmfSelectedEntity = getFirstSelection(DMFSelectedEntities_ds); dmfSelectedEntity; dmfSelectedEntity=DMFSelectedEntities_ds.getNext())
+      #        {
+      #            if(DMFProcessAutomationTool::find(dmfSelectedEntity.EntityName).RecId == 0)
+      #            {
+      #            dmfProcessAutomation.clear();
+      #            dmfProcessAutomation.EntityClass  = dmfSelectedEntity.EntityClass;
+      #            dmfProcessAutomation.EntityName   = dmfSelectedEntity.EntityName;
+      #            dmfProcessAutomation.EntityTable  = dmfSelectedEntity.EntityTable;
+      #            dmfProcessAutomation.SysModule    = dmfSelectedEntity.SysModule;
+      #            dmfProcessAutomation.TargetEntity = dmfSelectedEntity.TargetEntity;
+      #            dmfProcessAutomation.insert();
+      #            }
+      #            else
+      #            {
+      #                ttsBegin;
+      #                dmfProcessAutomation =  DMFProcessAutomationTool::find(dmfSelectedEntity.EntityName,true);
+      #                dmfProcessAutomation.DMFBatchStatus = DMFToolStatus::Waiting;
+      #                dmfProcessAutomation.update();
+      #                ttsCommit;
+      #                dmfProcessAutomation.clear();
+      #
+      #            }
+      #        }
+      #    }
+      #}
+    ENDSOURCE
+    SOURCE #run
+      #void run()
+      #{
+      #    super();
+      #}
+      #
+    ENDSOURCE
+    SOURCE #wizard
+      #SysWizard wizard()
+      #{
+      #    return sysWizard;
+      #}
+      #
+    ENDSOURCE
+  ENDMETHODS
+  OBJECTBANK
+    PROPERTIES
+    ENDPROPERTIES
+    
+    DATASOURCE
+      OBJECTPOOL
+        PROPERTIES
+          Name                #DMFSelectedEntities
+          Table               #DMFSelectedEntities
+          InsertIfEmpty       #No
+        ENDPROPERTIES
+        
+        FIELDLIST
+        ENDFIELDLIST
+      ENDOBJECTPOOL
+      METHODS
+      ENDMETHODS
+    ENDDATASOURCE
+  ENDOBJECTBANK
+  
+  REFERENCEDATASOURCES
+  ENDREFERENCEDATASOURCES
+  
+  JOINS
+  ENDJOINS
+  
+  PARTREFERENCES
+  ENDPARTREFERENCES
+  
+  DESIGN
+    PROPERTIES
+      Caption             #DMF Tool Wizard
+    ENDPROPERTIES
+    
+    CONTAINER
+      CONTROL GRID
+        PROPERTIES
+          Name                #Grid
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1610612733
+          HierarchyParent     #EntitiesGroup
+          DataSource          #DMFSelectedEntities
+          DataGroup           #Overview
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #EntitiesGroup
+          Width               #Column width
+          Height              #Column height
+          VerticalSpacing     #0
+          ElementPosition     #1717986916
+          HierarchyParent     #ModuleSelection
+          FrameType           #Sunken 3D
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL TAB
+        PROPERTIES
+          Name                #DMFToolWizard
+          AutoDeclaration     #Yes
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1073741823
+          DataSource          #DMFSelectedEntities
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL TABPAGE
+        PROPERTIES
+          Name                #Finish
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1789569705
+          HierarchyParent     #DMFToolWizard
+          Caption             #Finish
+          DataSource          #DMFSelectedEntities
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL TABPAGE
+        PROPERTIES
+          Name                #ModuleSelection
+          Width               #Column width
+          Height              #Column height
+          HelpText            #@CTS51
+          ElementPosition     #1252698793
+          HierarchyParent     #DMFToolWizard
+          Caption             #Module Selection
+          DataSource          #DMFSelectedEntities
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL TABPAGE
+        PROPERTIES
+          Name                #WelcomeTab
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #715827882
+          HierarchyParent     #DMFToolWizard
+          Caption             #@SYS339017
+          DataSource          #DMFSelectedEntities
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMBOBOX
+        PROPERTIES
+          Name                #Grid_SysModule
+          ElementPosition     #613566756
+          HierarchyParent     #Grid
+          DataSource          #DMFSelectedEntities
+          DataField           #SysModule
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMBOBOX
+        PROPERTIES
+          Name                #Modules
+          AutoDeclaration     #Yes
+          ElementPosition     #1288490187
+          HierarchyParent     #ModuleSelection
+          EnumType            #AllDMFModule
+        ENDPROPERTIES
+        
+        METHODS
+          SOURCE #modified
+            #public boolean modified()
+            #{
+            #    boolean ret;
+            #
+            #    ret = super();
+            #
+            #    element.populateEntities();
+            #
+            #    return ret;
+            #}
+          ENDSOURCE
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STATICTEXT
+        PROPERTIES
+          Name                #ChooseEntities
+          ElementPosition     #1073741822
+          HierarchyParent     #EntitiesGroup
+          Text                #Select the Entiites for Data Import
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STATICTEXT
+        PROPERTIES
+          Name                #ChooseModule
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #858993458
+          HierarchyParent     #ModuleSelection
+          Text                #
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STATICTEXT
+        PROPERTIES
+          Name                #StaticText
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1431655764
+          HierarchyParent     #WelcomeTab
+          Text                #@CTS50
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STATICTEXT
+        PROPERTIES
+          Name                #StaticText2
+          ElementPosition     #1073741822
+          HierarchyParent     #Finish
+          Text                #Click finish for populating entities
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #Grid_EntityClass
+          ElementPosition     #1840700268
+          HierarchyParent     #Grid
+          DataSource          #DMFSelectedEntities
+          DataField           #EntityClass
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #Grid_EntityName
+          ElementPosition     #920350134
+          HierarchyParent     #Grid
+          DataSource          #DMFSelectedEntities
+          DataField           #EntityName
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #Grid_EntityTable
+          ElementPosition     #1227133512
+          HierarchyParent     #Grid
+          DataSource          #DMFSelectedEntities
+          DataField           #EntityTable
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #Grid_TargetEntity
+          ElementPosition     #1533916890
+          HierarchyParent     #Grid
+          DataSource          #DMFSelectedEntities
+          DataField           #TargetEntity
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+    ENDCONTAINER
+    
+  ENDDESIGN
+  
+  PERMISSIONS #Permissions
+    PROPERTIES
+    ENDPROPERTIES
+    
+    PERMISSIONSET #Read
+      PROPERTIES
+      ENDPROPERTIES
+      
+      FORM #Controls
+      ENDFORM
+      
+    TABLES #Tables
+    ENDTABLES
+    
+  SERVERMETHODS #Server Methods
+  ENDSERVERMETHODS
+  
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Update
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Create
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Delete
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+ENDPERMISSIONS
+
+ENDFORM
+
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: viewPG_sav unloaded
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #viewPG_sav
+    #static void viewPG_sav(Args _args)
+    #{
+    # DMFDefinationGroupName   _definitionGroup;
+    # FormRun formRun;
+    # Args args = new Args();
+    #
+    #_definitionGroup =  " Id-00303";
+    #args.name(formstr(DMFDefinitionGroup));
+    #args.record(DMFDefinitionGroup::find(_definitionGroup));
+    #
+    # new MenuFunction(MenuItemDisplayStr(DMFDefinitionGroup),MenuItemType::Display).run(args);
+    #
+    #//formRun = ClassFactory.formRunClass(args);
+    #//formRun.init();
+    #//formRun.run();
+    #//formRun.wait();
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{B1881E63-0263-460C-9B42-D0DF95C31604}
+  ENDPROPERTIES
+  
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: job24 unloaded
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #job24
+    #static void job24(Args _args)
+    #{
+    #//DMFEntityName   entityname;
+    #    //entityname = "Customer";
+    #   //info(DMFProcessAutomationTool::find(entityname).SampleFilePath);
+    #    Args args;
+    #    str st;
+    #
+    #    args = new Args();
+    #    st = "customer";
+    #    args.parm(st);
+    #   // info(args.toString());
+    #DMFAutomationTool::main(args);
+    #
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{4E3D908F-4524-4E15-9B62-60F21A9C5CEF}
+  ENDPROPERTIES
+  
+
+***Element: JOB
+
+; Microsoft Dynamics AX Job: clearCache unloaded
+; --------------------------------------------------------------------------------
+  JOBVERSION 1
+  
+  SOURCE #clearCache
+    #static void clearCache()
+    #{
+    #    SysLastValue    lastVal;
+    #
+    #    ttsBegin;
+    #    delete_from lastVal;
+    #    ttsCommit;
+    #
+    #    info('Cleared cache...');
+    #}
+  ENDSOURCE
+  PROPERTIES
+    Origin              #{313F3028-1AC0-4EB6-AC81-EF22414D704D}
+  ENDPROPERTIES
+  
+
+***Element: MNU
+
+; Microsoft Dynamics AX Menu : DMF unloaded
+; --------------------------------------------------------------------------------
+  MNUVERSION 5
+  
+  MENU #DMF
+    PROPERTIES
+      Name                #DMF
+      Label               #@DMF69
+      ConfigurationKey    #DMF
+      SetCompany          #Yes
+      NormalImage         #10115
+      ImageLocation       #EmbeddedResource
+      Origin              #{B686F7CD-9E21-4205-A51E-C62851582BD5}
+    ENDPROPERTIES
+    
+    MENU #@SYS333846
+      PROPERTIES
+        Name                #Common
+        Label               #@SYS333846
+        NormalImage         #3495
+        ImageLocation       #EmbeddedResource
+      ENDPROPERTIES
+      
+      MENUITEM
+        PROPERTIES
+          Name                #DMFProcessAutomation
+          MenuItemName        #DMFProcessAutomation
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Processing group
+          MenuItemName        #DMFDefinitionGroup
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Create a custom entity for data import/export
+          MenuItemName        #DMFCustomWizard
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Compare entity data between companies
+          MenuItemName        #DMFDefinitionGroupCompare
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Copy entity data between companies
+          MenuItemName        #DMFDefinitionGroupCopy
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+    ENDMENU
+    MENU #@SYS333856
+      PROPERTIES
+        Name                #Inquiries
+        Label               #@SYS333856
+        NormalImage         #3474
+        ImageLocation       #EmbeddedResource
+      ENDPROPERTIES
+      
+    ENDMENU
+    MENU #@SYS333869
+      PROPERTIES
+        Name                #Setup
+        Label               #@SYS333869
+        NormalImage         #3478
+        ImageLocation       #EmbeddedResource
+      ENDPROPERTIES
+      
+      MENUITEM
+        PROPERTIES
+          Name                #Target entities
+          MenuItemName        #DMFEntity
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Source data formats
+          MenuItemName        #DMFDataSource
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Data import/export framework parameters
+          MenuItemName        #DMFParameters
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #RMS migration parameters
+          MenuItemName        #RetailRMSMigrationParameters
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Setup of roles for processing group
+          MenuItemName        #DMFDefinationGroupAccess
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Initialize RMS migration entities
+          MenuItemType        #Action
+          MenuItemName        #RetailRMSMigrationSetup
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+    ENDMENU
+    MENU #@SYS332999
+      PROPERTIES
+        Name                #Periodic
+        Label               #@SYS332999
+        NormalImage         #3476
+        ImageLocation       #EmbeddedResource
+      ENDPROPERTIES
+      
+      MENUITEM
+        PROPERTIES
+          Name                #Staging cleanup
+          MenuItemType        #Action
+          MenuItemName        #DMFStagingCleanup
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+    ENDMENU
+    MENU #@SYS4001386
+      PROPERTIES
+        Name                #Mdm
+        Label               #@SYS4001386
+        ConfigurationKey    #MDM
+      ENDPROPERTIES
+      
+      MENUITEM
+        PROPERTIES
+          Name                #Configure SQL Server Master Data Services connection
+          MenuItemName        #MdmConfiguration
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Publish entities to SQL Master Data Services
+          MenuItemName        #MdmProvisioning
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Manage synchronization
+          MenuItemName        #MdmSyncGroup
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #View conflicts
+          MenuItemName        #MdmViewConflicts
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+    ENDMENU
+  ENDMENU
+  
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : DMFProcessAutomation unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #DMFProcessAutomation
+    Type: 1
+    PROPERTIES
+      Name                #DMFProcessAutomation
+      Label               #@DMF1959
+      Object              #DMFProcessAutomation
+      Origin              #{2CAAE8A9-B304-46D3-9504-079868A4D3E3}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : DMFAutomationToolMI unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #DMFAutomationToolMI
+    Type: 3
+    PROPERTIES
+      Name                #DMFAutomationToolMI
+      Label               #Run
+      ObjectType          #Class
+      Object              #DmfautomationTool
+      Origin              #{3DD178DF-A579-497F-9102-DFEE7B44C463}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : DataMigrationAutomation unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #DataMigrationAutomation
+  SHARED
+  PROPERTIES
+    Name                #DataMigrationAutomation
+    Origin              #{212474FB-6DE9-4F3A-A31D-1A6DBF46329F}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    GROUP #DataDictionary
+      PROPERTIES
+        Name                #DataDictionary
+        ProjectGroupType    #DataDictionary
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      GROUP #Enums
+        PROPERTIES
+          Name                #Enums
+          ProjectGroupType    #BaseEnums
+          GroupMask           #AllDMFModule
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 40
+          UTILOBJECTID 101414
+          NODETYPE 209
+          NAME #AllDMFModule
+        ENDNODE
+        ENDGROUP
+        
+      GROUP #Tables
+        PROPERTIES
+          Name                #Tables
+          ProjectGroupType    #Tables
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          UTILOBJECTID 103801
+          NODETYPE 204
+          NAME #DMFSelectedEntities
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          UTILOBJECTID 104384
+          NODETYPE 204
+          NAME #DMFProcessAutomationTool
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          UTILOBJECTID 104388
+          NODETYPE 204
+          NAME #DMFDefinitionGroupTest
+        ENDNODE
+        ENDGROUP
+        
+      ENDGROUP
+      
+    GROUP #Classes
+      PROPERTIES
+        Name                #Classes
+        ProjectGroupType    #Classes
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        UTILOBJECTID 1026478
+        NODETYPE 329
+        NAME #DMFToolWizard
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 45
+        UTILOBJECTID 1026491
+        NODETYPE 329
+        NAME #DMFAutomationTool
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Forms
+      PROPERTIES
+        Name                #Forms
+        ProjectGroupType    #Forms
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        UTILOBJECTID 0
+        NODETYPE 201
+        NAME #DMFProcessAutomation
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        UTILOBJECTID 0
+        NODETYPE 201
+        NAME #DMFToolWizard
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Jobs
+      PROPERTIES
+        Name                #Jobs
+        ProjectGroupType    #Jobs
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        UTILOBJECTID 0
+        NODETYPE 215
+        NAME #viewPG_sav
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        UTILOBJECTID 0
+        NODETYPE 215
+        NAME #job24
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 5
+        UTILOBJECTID 0
+        NODETYPE 215
+        NAME #clearCache
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #Menus
+      PROPERTIES
+        Name                #Menus
+        ProjectGroupType    #Menus
+        GroupMask           #DMF
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 16
+        UTILOBJECTID 0
+        NODETYPE 205
+        NAME #DMF
+      ENDNODE
+      ENDGROUP
+      
+    GROUP #MenuItems
+      PROPERTIES
+        Name                #MenuItems
+        ProjectGroupType    #MenuItems
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      GROUP #Display
+        PROPERTIES
+          Name                #Display
+          ProjectGroupType    #Display
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 1
+          UTILOBJECTID 0
+          NODETYPE 296
+          NAME #DMFProcessAutomation
+        ENDNODE
+        ENDGROUP
+        
+      GROUP #Action
+        PROPERTIES
+          Name                #Action
+          ProjectGroupType    #Action
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 3
+          UTILOBJECTID 0
+          NODETYPE 296
+          NAME #DMFAutomationToolMI
+        ENDNODE
+        ENDGROUP
+        
+      ENDGROUP
+      
+  ENDPROJECT
+  
+
+***Element: END
